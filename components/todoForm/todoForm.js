@@ -1,15 +1,12 @@
 import { addTodo } from "../../api/todoApi";
-import "./todoForm.css"
-
+import "./todoForm.css";
 
 export function renderTodoForm() {
     const form = document.createElement("form");
     form.className = "todo-form";
 
-
-
     form.innerHTML = `
-        <input type="text" placeholder="Enter a new todo" required />
+        <input type="text" placeholder="Enter todo" required />
         <button type="submit">Add</button>
     `;
 
@@ -21,7 +18,6 @@ export function renderTodoForm() {
             input.value = "";
             const event = new Event("todosUpdated");
             document.dispatchEvent(event);
-                
         }
     });
     return form;

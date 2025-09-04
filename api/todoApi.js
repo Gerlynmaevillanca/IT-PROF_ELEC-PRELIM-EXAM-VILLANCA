@@ -13,9 +13,6 @@ export async function addTodo(text) {
 }
 
 export async function completeTodo(id) {
-    const res = await axios.put(`${API_URL}/completedTodo`, { id });
+    const res = await axios.put(`${API_URL}/completeTodo`, { id });
     return res.data;
 }
-
-
-

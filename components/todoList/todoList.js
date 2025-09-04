@@ -1,6 +1,6 @@
 import { getTodos, completeTodo } from "../../api/todoApi";
-import "./todoList.css"
-import JSConfetti from 'js-confetti'
+import "./todoList.css";
+import JSConfetti from 'js-confetti';
 
 export async function renderTodoList() {
     const container = document.createElement("div");

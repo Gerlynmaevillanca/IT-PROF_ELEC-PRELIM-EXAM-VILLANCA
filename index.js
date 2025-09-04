@@ -7,11 +7,11 @@ app.use(express.json());
 
 let todos = [];
 
-app.get("/api/todos", (req, res) => {
+app.get("/api/todos", (req, res) => {   
     res.json(todos);
 });
 
-app.post("/api/addTodos", (req, res) => {
+app.post("/api/addTodo", (req, res) => {
     const { text } = req.body;
     const newTodo = { id: Date.now(), text, completed: false };
     todos.push(newTodo);
